@@ -10,8 +10,8 @@ def index(request):
     return render(request, 'blog/index.html', context)
 
 
-def post_detail(request, year, month, day, post):
-    post = get_object_or_404(Post, publish__year=year, publish__month=month, publish__day=day, post=post)
+def post_detail(request, year, month, day, slug):
+    post = get_object_or_404(Post, publish__year=year, publish__month=month, publish__day=day, slug=slug)
     context = {
         'post': post
     }
