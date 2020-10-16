@@ -4,6 +4,19 @@ from django.utils import timezone
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 
+
+class Category(models.Model):
+    name = models.CharField(max_length=200)
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user_image = models.ImageField(default='default.png', upload_to='profile_images')
+
+    def __str__(self):
+        return self.user.username
+
+
 class PublishedManager(models.Manager):
     def get_queryset(self):
         queryset = super(PublishedManager, self).get_queryset()
@@ -11,12 +24,13 @@ class PublishedManager(models.Manager):
         return main
 
 
-class Post(models.Model):
+class Posts(models.Model):
     STATUS_CHOICES = (
         ('', ''),
         ('Published', 'Published'),
         ('Draft', 'Draft')
     )
+    category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique_for_date='publish')
     featured_image = models.ImageField(blank=True, upload_to='featured_images')
