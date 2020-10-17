@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Posts, Profile
+from .models import Posts, Profile, Category
 
 
 @admin.register(Posts)
@@ -14,5 +14,6 @@ class PostAdmin(admin.ModelAdmin):
     ordering = ('status', 'publish')
 
 admin.site.register(Profile)
+admin.site.register(Category)
 
 

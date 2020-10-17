@@ -15,4 +15,22 @@ def post_detail(request, year, month, day, slug):
     context = {
         'post': post
     }
-    return render(request, 'blog/single.html', context)
+    return render(request, 'blog/blog-single.html', context)
+
+def blogs(request):
+    context = {
+
+    }
+    return render(request,'blog/blog.html',context)
+
+def about(request):
+    context = {
+        
+    }
+    return render(request,'blog/about.html',context)
+
+def contact(request):
+    context = {
+        
+    }
+    return render(request,'blog/contact.html',context)

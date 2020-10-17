@@ -1,13 +1,12 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 24/01/2019 09:02
+    Creation date: 14/01/2019 09:57
     */
 
     @font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("./Flaticon.woff2") format("woff2"),
        url("./Flaticon.woff") format("woff"),
        url("./Flaticon.ttf") format("truetype"),
        url("./Flaticon.svg#Flaticon") format("svg");
@@ -37,16 +36,28 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-frontal-truck:before { content: "\f100"; }
-.flaticon-sea-ship-with-containers:before { content: "\f101"; }
-.flaticon-car:before { content: "\f102"; }
-.flaticon-platform:before { content: "\f103"; }
-.flaticon-travel:before { content: "\f104"; }
-.flaticon-barn:before { content: "\f105"; }
+    .flaticon-family:before { content: "\f100"; }
+.flaticon-auction:before { content: "\f101"; }
+.flaticon-handcuffs:before { content: "\f102"; }
+.flaticon-shield:before { content: "\f103"; }
+.flaticon-lawyer:before { content: "\f104"; }
+.flaticon-medal:before { content: "\f105"; }
+.flaticon-handshake:before { content: "\f106"; }
+.flaticon-house:before { content: "\f107"; }
+.flaticon-employee:before { content: "\f108"; }
+.flaticon-fire:before { content: "\f109"; }
+.flaticon-money:before { content: "\f10a"; }
+.flaticon-medicine:before { content: "\f10b"; }
     
-    $font-Flaticon-frontal-truck: "\f100";
-    $font-Flaticon-sea-ship-with-containers: "\f101";
-    $font-Flaticon-car: "\f102";
-    $font-Flaticon-platform: "\f103";
-    $font-Flaticon-travel: "\f104";
-    $font-Flaticon-barn: "\f105";
+    $font-Flaticon-family: "\f100";
+    $font-Flaticon-auction: "\f101";
+    $font-Flaticon-handcuffs: "\f102";
+    $font-Flaticon-shield: "\f103";
+    $font-Flaticon-lawyer: "\f104";
+    $font-Flaticon-medal: "\f105";
+    $font-Flaticon-handshake: "\f106";
+    $font-Flaticon-house: "\f107";
+    $font-Flaticon-employee: "\f108";
+    $font-Flaticon-fire: "\f109";
+    $font-Flaticon-money: "\f10a";
+    $font-Flaticon-medicine: "\f10b";
