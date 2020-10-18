@@ -27,17 +27,17 @@
     
 	  <nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Read<i>it</i>.</a>
+	      <a class="navbar-brand" href="{% url 'blog:index' %}">Read<i>it</i>.</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Articles</a></li>
-	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Team</a></li>
-	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+	          <li class="nav-item active"><a href="{% url 'blog:index' %}" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="{% url 'blog:blog' %}" class="nav-link">Articles</a></li>
+	          <li class="nav-item"><a href="{% url 'blog:about' %}" class="nav-link">Team</a></li>
+	          <li class="nav-item"><a href="{% url 'blog:contact' %}" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -76,12 +76,12 @@
    					<div class="case">
    						<div class="row">
    							<div class="col-md-6 col-lg-6 col-xl-8 d-flex">
-   								<a href="blog-single.html" class="img w-100 mb-3 mb-md-0" style="background-image: url('{{post.featured_image.url}}');"></a>
+   								<a href="{{post.get_absolute_url}}" class="img w-100 mb-3 mb-md-0" style="background-image: url('{{post.featured_image.url}}');"></a>
    							</div>
    							<div class="col-md-6 col-lg-6 col-xl-4 d-flex">
    								<div class="text w-100 pl-md-3">
    									<span class="subheading">{{post.category}}</span>
-   									<h2><a href="blog-single.html">{{post.title}}</a></h2>
+   									<h2><a href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
    									<ul class="media-social list-unstyled">
 			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
