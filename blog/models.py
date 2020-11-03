@@ -1,4 +1,5 @@
 from django.db import models
+from urllib.parse import quote_plus
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
@@ -49,6 +50,16 @@ class Posts(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
+
+    @property
+    def url_coded_string(self):
+        return quote_plus(self.title)
+
+    @property
+    def monthpublished(self):
+        return self.publish.strftime('%B')
+
+        
 
     objects = models.Manager()
     published = PublishedManager()
