@@ -1,8 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Posts
 from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
-from django.core.mail import send_mail
-from django.http import JsonResponse
 
 
 def index(request):
@@ -44,15 +42,13 @@ def blogs(request):
     return render(request,'blog/blog.html',context)
 
 def about(request):
-    return render(request,'blog/about.html')
+    context = {
+        
+    }
+    return render(request,'blog/about.html',context)
 
 def contact(request):
-    if request.method == 'POST' and request.is_ajax:
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        subject = request.POST.get('subject')
-        textarea = request.POST.get('textarea')
-        send_mail(subject, f"Name: {name}\nEmail: {email}\nMessage: {textarea}", email,["testingblog260@gmail.com"])
-        return JsonResponse({"data":"success"},status=200)
-
-    return render(request,'blog/contact.html')
+    context = {
+        
+    }
+    return render(request,'blog/contact.html',context)

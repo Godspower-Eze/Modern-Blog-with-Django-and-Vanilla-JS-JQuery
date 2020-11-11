@@ -2,12 +2,11 @@
 {% load static %}
 <html lang="en">
   <head>
-    <title>Godspower Eze Sample Blog</title>
+    <title>Readit - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -28,7 +27,7 @@
     
 	  <nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="{% url 'blog:index' %}">Read<i>it</i>.</a>
+	      <a class="navbar-brand" href="index.html">Read<i>it</i>.</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -51,7 +50,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
             <h1 class="mb-3 bread">Contact us</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'blog:index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -71,34 +70,29 @@
             <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
           </div>
           <div class="col-md-3">
-            <p><span>Email:</span> <a href="mailto:codingwithgodspower@gmail.com">codingwithgodspower@gmail.com</a></p>
+            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
           </div>
           <div class="col-md-3">
-            <p><span>Website</span> <a href="https://codingwithease.com/">codingwithease.com</a></p>
+            <p><span>Website</span> <a href="#">yoursite.com</a></p>
           </div>
         </div>
         <div class="row block-9 no-gutters">
           <div class="col-lg-6 order-md-last d-flex">
-            <form id="contact-form" method="post" action="" class="bg-light p-4 p-md-5 contact-form">
-              {% csrf_token %}
+            <form action="#" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
-                <input name="name-form" id="name-form" type="text" class="form-control" placeholder="Your Name" required>
+                <input type="text" class="form-control" placeholder="Your Name">
               </div>
               <div class="form-group">
-                <input name="email-form" id="email-form" type="email" class="form-control" placeholder="Your Email" required>
+                <input type="text" class="form-control" placeholder="Your Email">
               </div>
               <div class="form-group">
-                <input name="subject-form" id="subject-form" type="text" class="form-control" placeholder="Subject" required>
+                <input type="text" class="form-control" placeholder="Subject">
               </div>
               <div class="form-group">
-                <textarea name="textarea-form" id="textarea-form" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <input id="submit-button-message" type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-              <div class="d-flex justify-content-center">
-                <div id="spinner" style="display:none;" class="spinner-border text-primary" role="status">
-                </div>
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           
@@ -142,6 +136,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="{% static 'js/google-map.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
-  <script  src="{% static 'js/contactvalidation.js' %}"></script>
+    
   </body>
 </html>
