@@ -24,7 +24,7 @@ SECRET_KEY = '#y2)o=#riihur8)g!okq4$-rjbm2u&@n84!!0fx87&^*n8==2='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['godspowerblog.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -118,10 +118,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
@@ -140,6 +138,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'testingblog260@gmail.com'
 EMAIL_HOST_PASSWORD = 'testblog123'
 EMAIL_USE_TLS = True
-
-
-
