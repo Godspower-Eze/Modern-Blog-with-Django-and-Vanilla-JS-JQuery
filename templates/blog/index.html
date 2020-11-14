@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
-{% load social_share %}
 <html lang="en">
   <head>
-    <title>Readit - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Home - Eze's Blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -45,23 +44,18 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-12 ftco-animate">
           	<h2 class="subheading">Hello! Welcome to</h2>
-          	<h1 class="mb-4 mb-md-0">Readit blog</h1>
+          	<h1 class="mb-4 mb-md-0">Eze's blog</h1>
           	<div class="row">
           		<div class="col-md-7">
           			<div class="text">
 	          			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-	          			<div class="mouse">
-										<a href="#" class="mouse-icon">
-											<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-										</a>
-									</div>
-								</div>
+                    </div>
           		</div>
           	</div>
           </div>
@@ -88,7 +82,7 @@
 			                <li class="ftco-animate"><a href="https://www.facebook.com/sharer/sharer.php?u=http://{{request.get_host}}/{{post.get_absolute_url}}"><span class="icon-facebook"></span></a></li>
 			              </ul>
    									<div class="meta">
-   										<p class="mb-0"><a href="#">{{post.publish}}</a> | <a href="#">12 min read</a></p>
+   										<p class="mb-0"><a href="{{post.get_absolute_url}}">{{post.publish}}</a> | <a href="#">12 min read</a></p>
    									</div>
    								</div>
    							</div>

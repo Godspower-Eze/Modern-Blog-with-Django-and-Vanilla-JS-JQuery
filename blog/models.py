@@ -3,7 +3,7 @@ from urllib.parse import quote_plus
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Category(models.Model):
@@ -39,7 +39,7 @@ class Posts(models.Model):
     slug = models.SlugField(max_length=200, unique_for_date='publish')
     featured_image = models.ImageField(blank=True, upload_to='featured_images')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    body = RichTextField()
+    body = RichTextUploadingField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -59,7 +59,9 @@ class Posts(models.Model):
     def monthpublished(self):
         return self.publish.strftime('%B')
 
-        
+    @property
+    def post_author_image(self):
+        return self.author.profile.user_image.url
 
     objects = models.Manager()
     published = PublishedManager()
