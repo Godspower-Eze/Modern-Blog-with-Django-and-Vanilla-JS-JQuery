@@ -141,3 +141,5 @@ EMAIL_HOST_USER = 'testingblog260@gmail.com'
 EMAIL_HOST_PASSWORD = 'testblog123'
 EMAIL_USE_TLS = True
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
